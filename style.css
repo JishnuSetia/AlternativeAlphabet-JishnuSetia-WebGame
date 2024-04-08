@@ -1,0 +1,142 @@
+@keyframes background-pan{
+    from{
+        background-position: 0% center;
+    }   
+    to{
+        background-position: -200% center;
+    }
+}
+
+body{
+    /* animation: background-pan 80s linear infinite; */
+    background-color: rgb(0, 72, 160);
+    background-image: url('res/logoV2.png');
+    background-repeat: repeat;
+    background-size: 70px;
+    background-blend-mode:luminosity;
+    color: white;
+    font-family: "Merriweather", serif;
+    overflow-x:  hidden;
+}
+main{
+    margin-bottom: 40px;
+}
+footer{
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    background-color: rgb(0, 72, 160);
+    color: #FFF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+.headLink{
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 10%;
+    transition: 1s ease;
+}
+.headLink:hover{
+    color: #bdbdbd;
+}
+.header {
+    background-color: transparent;
+    color: #FFF;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.header.transparent {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.header.transparent .container img{
+    filter: drop-shadow(0 0 1rem rgb(0, 255, 238));
+    transition: 1s ease;
+}
+.header.colored {
+    background-color: rgb(0, 72, 160) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.header.colored .container img{
+    filter: none;
+    transition: 1s ease;
+}
+.box {
+    /* flex: 1;
+    height: 400px;
+    background-color: rgb(50, 125, 175);
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 1s ease; */
+    height: 200px;
+    background-color: transparent;
+    margin-right: 10px;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(15px); 
+    transition: 1s ease;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  }
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    text-align: left;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+}  
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PlayNow {
+    color: #FFF;
+    text-decoration: none;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    transition: 0.5s ease-in;
+}
+
+.PlayNow:hover {
+    color: rgb(0, 72, 160);
+    border-color: transparent;
+    background-color: white;
+}
+.backImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.backImage img{
+    border-radius: 20px;
+}
