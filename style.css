@@ -8,7 +8,7 @@
 }
 
 body{
-    /* animation: background-pan 80s linear infinite; */
+    animation: background-pan 80s linear infinite;
     background-color: rgb(0, 72, 160);
     background-image: url('res/logoV2.png');
     background-repeat: repeat;
@@ -59,21 +59,32 @@ footer{
     right: 0;
     z-index: 9999;
 }
+
+.header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .header.transparent {
-    background-color: transparent !important;
-    box-shadow: none !important;
+    background-color: transparent!important;
+    box-shadow: none!important;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
-.header.transparent .container img{
+
+.header.transparent .container img {
     filter: drop-shadow(0 0 1rem rgb(0, 255, 238));
     transition: 1s ease;
 }
+
 .header.colored {
-    background-color: rgb(0, 72, 160) !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    background-color: rgb(0, 72, 160)!important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)!important;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
-.header.colored .container img{
+
+.header.colored .container img {
     filter: none;
     transition: 1s ease;
 }
@@ -139,4 +150,56 @@ footer{
 }
 .backImage img{
     border-radius: 20px;
+}
+/* Add this to your CSS */
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: 35px;
+    }
+   .header {
+        height: 50px;
+    }
+   .header.transparent.container,.header.colored.container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+   .headLink {
+        margin-right: 5%;
+        font-size: 14px;
+    }
+  .box {
+        height: 150px;
+    }
+
+  .box-content h1 {
+        font-size: 1.5rem;
+    }
+
+  .box-content h3 {
+        font-size: 1rem;
+    }
+
+  .PlayNow {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+  .Home h2 {
+        font-size: 1.5rem;
+    }
+
+  .Home div a {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+  .container {
+        flex-direction: column;
+    }
+
+  .box {
+        margin-bottom: 10px;
+    }
 }
